@@ -165,9 +165,6 @@
       当日不承接并清空存量；无持有期上限，仅在需要腾现金给新票建仓时赎回；单边 0.05% 费 · 整股成交
       （余款不足 1 股则不动）。
     </div>
-    <div class="ytd-note" style="font-size:11px;color:#d29922;margin-top:6px;padding:6px 10px;background:rgba(210,153,34,.06);border-left:3px solid #d29922;border-radius:0 4px 4px 0">
-      ⚠️ <b>历史账本修正</b>（2026-09-12 老板拍板追溯修复）：8-31 ~ 9-4 期间 4 只建仓因 fetch_klines 失败导致少投（ESTC 64→100 股 $6,375→$9,961 / DELL 12→20 股 $5,847→$9,745 / CNH 445→725 股 $6,134→$9,996 / SNOW 15→28 股 $5,315→$9,921，合计注入 <b>+$15,952</b>）。修正后：cash 减 $15,952、市值增 $15,952、total_assets 保持 $193,486、return -3.26%。账本已按"5% × $200K 预算"回填正确股数。引擎 bug 已同步修复（<code>us_paper_engine_v21.py</code>：revalue 加 fetch 重试 1 次 + buy_stocks 用 <code>_last_equity</code> 兜底），未来不会再发生。
-    </div>
     <details style="margin-top:8px;font-size:11px;color:#9da7b3">
       <summary style="cursor:pointer;color:#58a6ff">📋 逐笔核对清单（点击展开 · 2026-09-12 老板拍板）</summary>
       <div style="margin-top:6px;padding:8px 10px;background:rgba(88,166,255,.04);border-left:3px solid #58a6ff;border-radius:0 4px 4px 0;font-family:monospace;font-size:11px;line-height:1.6">
